@@ -6,11 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="spark-hivesql" />
+        <module name="spark-hivesql-sparksession" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="spark-hivesql" target="1.5" />
+    <bytecodeTargetLevel target="8">
+      <module name="spark-hivesql-sparksession" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

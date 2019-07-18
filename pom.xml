@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.iflytek.edmp</groupId>
-    <artifactId>spark-hivesql</artifactId>
+    <artifactId>spark-hivesql-sparksession</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
@@ -12,38 +12,14 @@
 
     <properties>
         <encoding>UTF-8</encoding>
-        <scala.version>2.10.4</scala.version>
-        <spark.version>1.5.0-cdh5.6.1</spark.version>
+        <scala.version>2.11.4</scala.version>
+        <spark.version>2.3.0.cloudera1</spark.version>
         <hadoop.version>2.6.0</hadoop.version>
         <scope.flag>provided</scope.flag>
+        <!--<scope.flag>compile</scope.flag>-->
     </properties>
 
     <repositories>
-
-        <repository>
-            <id>com</id>
-            <name>iflytek</name>
-            <url>http://maven.iflytek.com:8081/nexus/content/groups/public/</url>
-        </repository>
-
-        <repository>
-            <id>spring-release</id>
-            <name>Spring Release Repository</name>
-            <url>http://repo.spring.io/libs-release</url>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </repository>
-
-        <repository>
-            <id>central-repos</id>
-            <name>Central Repository</name>
-            <url>http://repo.maven.apache.org/maven2</url>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </repository>
-
         <repository>
             <id>nexus-aliyun</id>
             <name>Nexus aliyun</name>
@@ -55,6 +31,11 @@
             <releases>
                 <enabled>true</enabled>
             </releases>
+        </repository>
+
+        <repository>
+            <id>cloudera</id>
+            <url>https://repository.cloudera.com/artifactory/cloudera-repos/</url>
         </repository>
 
     </repositories>
@@ -98,31 +79,31 @@
         <!--spark-->
         <dependency>
             <groupId>org.apache.spark</groupId>
-            <artifactId>spark-core_2.10</artifactId>
+            <artifactId>spark-core_2.11</artifactId>
             <version>${spark.version}</version>
             <scope>${scope.flag}</scope>
         </dependency>
         <dependency>
             <groupId>org.apache.spark</groupId>
-            <artifactId>spark-streaming_2.10</artifactId>
+            <artifactId>spark-streaming_2.11</artifactId>
             <version>${spark.version}</version>
             <scope>${scope.flag}</scope>
         </dependency>
         <dependency>
             <groupId>org.apache.spark</groupId>
-            <artifactId>spark-mllib_2.10</artifactId>
+            <artifactId>spark-mllib_2.11</artifactId>
             <version>${spark.version}</version>
             <scope>${scope.flag}</scope>
         </dependency>
         <dependency>
             <groupId>org.apache.spark</groupId>
-            <artifactId>spark-sql_2.10</artifactId>
+            <artifactId>spark-sql_2.11</artifactId>
             <version>${spark.version}</version>
             <scope>${scope.flag}</scope>
         </dependency>
         <dependency>
             <groupId>org.apache.spark</groupId>
-            <artifactId>spark-hive_2.10</artifactId>
+            <artifactId>spark-hive_2.11</artifactId>
             <version>${spark.version}</version>
             <scope>${scope.flag}</scope>
         </dependency>
@@ -130,7 +111,7 @@
     </dependencies>
 
     <build>
-        <finalName>spark-hivesql</finalName>
+        <finalName>spark-hivesql-sparksession</finalName>
 
         <plugins>
 
