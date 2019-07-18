@@ -20,7 +20,7 @@ object TestSpark {
 
     val conf = new SparkConf()
     //本地模式提交运行
-        conf.setMaster("local")
+//        conf.setMaster("local")
     conf.setAppName(this.getClass.getName)
 
     //SparkContext是Spark的入口，负责连接Spark集群，创建RDD，累积量和广播量等。从本质上来说，SparkContext是Spark的对外接口，负责向调用这提供Spark的各种功能。它的作用是一个容器。
