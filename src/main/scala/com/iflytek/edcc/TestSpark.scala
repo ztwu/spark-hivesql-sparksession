@@ -13,9 +13,9 @@ import org.apache.spark.sql.SparkSession
 object TestSpark {
 
   def main(args: Array[String]): Unit = {
-    val spark = SparkSession.builder().appName("spark-hive").enableHiveSupport().getOrCreate();
-    spark.sql("select * from edu_jyyun_model.dim_date").show()
-    spark.catalog.listDatabases.show(false)
+      val spark = SparkSession.builder().appName("spark-hive").enableHiveSupport().getOrCreate();
+      spark.sql("select * from edu_jyyun_model.dim_date").show()
+      spark.catalog.listDatabases.show(false)
   }
 
 }
